@@ -1,16 +1,16 @@
 .App {
   text-align: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App.light {
+  background-color: azure;
+  color: #34495e;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App.dark {
+  background-color: #34495e;
+  color: #fff;
 }
 
 .App-header {
@@ -24,15 +24,154 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 42px;
+  font-weight: bold;
+
+  margin: 0 20px 20px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App.light .title {
+  border-bottom: 2px double #34495e;
+}
+
+.App.dark .title {
+  border-bottom: 2px double #fff;
+}
+
+.mode {
+  position: absolute;
+  right: 0;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.task-title {
+  font-family: 36px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.App.light > div.list-items > div.task-title {
+  color: #34495e;
+}
+
+.App.dark > div.list-items > div.task-title {
+  color: #fff;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-item {
+  /* transform: scale(2); */
+  background-color: red;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 20px;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+}
+
+.check-complete {
+  transform: scale(3);
+  margin: 20px;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  width: 50%;
+  margin-top: 50px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.App.light .todo-item {
+  border-bottom: 2px solid #34495e;
+}
+
+.App.dark .todo-item {
+  border-bottom: 2px solid #fff;
+}
+
+.list-task {
+  display: flex;
+  align-items: center;
+}
+
+.list-task i {
+  margin-right: 10px;
+}
+
+.todo-create-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px 30px;
+  width: 40%;
+}
+
+.todo-button {
+  width: 200px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px grey;
+}
+
+.App.dark .todo-button,
+.App.light .todo-button:hover {
+  color: #5d85b1;
+  border: 2px solid #5d85b1;
+  background-color: #fff;
+}
+
+.App.dark .todo-button:hover,
+.App.light .todo-button {
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: #5d85b1;
+}
+
+.action-buttons button {
+  background-color: #fff;
+  color: goldenrod;
+  font-weight: bold;
+  border: 2px solid goldenrod;
+  border-radius: 5px;
+  padding: 20px 30px;
+  width: 250px;
+  box-shadow: 3px 3px 3px grey;
+  margin: 30px;
+}
+
+.action-buttons button:hover {
+  background-color: goldenrod;
+  color: #fff;
+  border: 2px solid #fff;
 }
